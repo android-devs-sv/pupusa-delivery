@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Pupusa Delivery</string>
     <string name="pupusa_delivery">Pupusa Delivery</string>
+    <string name="title_activity_splash">SplashActivity</string>
 </resources>

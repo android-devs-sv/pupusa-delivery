@@ -1,5 +1,9 @@
 package com.androidsv.pupusadelivery.model;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+
+import io.realm.RealmList;
 import io.realm.RealmObject;
 
 /**
@@ -11,7 +15,7 @@ public class Order extends RealmObject{
     private long id;
     private User user;
     private String status;
-    private HashMap<Product, Integer> products = new HashMap<>();
+    private RealmList<ProductOrder> products = new RealmList<>();
 
     public long getId() {
         return id;
@@ -37,11 +41,11 @@ public class Order extends RealmObject{
         this.status = status;
     }
 
-    public HashMap<Product, Integer> getProducts() {
+    public List<ProductOrder> getProducts() {
         return products;
     }
 
-    public void setProducts(HashMap<Product, Integer> products) {
+    public void setProducts(RealmList<ProductOrder> products) {
         this.products = products;
     }
 }
